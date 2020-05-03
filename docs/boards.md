@@ -13,7 +13,7 @@ This code base already had supported for a handful of following boards (sorted a
 
 - [ESP32-S2-Saola-1](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/hw-reference/esp32s2/user-guide-saola-1-v1.2.html)
 
-### MicroChip SAMD
+### MicroChip SAM
 
 - [Adafruit Circuit Playground Express](https://www.adafruit.com/product/3333)
 - [Adafruit Feather M0 Express](https://www.adafruit.com/product/3403)
@@ -23,6 +23,7 @@ This code base already had supported for a handful of following boards (sorted a
 - [Adafruit Metro M0 Express](https://www.adafruit.com/product/3505)
 - [Adafruit Metro M4 Express](https://www.adafruit.com/product/3382)
 - [Seeeduino Xiao](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
+- [SAMG55 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
 
 ### Nordic nRF5x
 
