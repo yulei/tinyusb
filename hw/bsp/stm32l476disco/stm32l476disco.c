@@ -186,8 +186,15 @@ void board_init(void)
   /* Enable USB FS Clock */
   __HAL_RCC_USB_OTG_FS_CLK_ENABLE();
 
-  // Enable VBUS sense (B device) via pin PA9
-  USB_OTG_FS->GCCFG |= USB_OTG_GCCFG_VBDEN;
+  // L476Disco use general GPIO PC11 for VBUS sensing instead of dedicated PA9 as others
+  // Disable VBUS Sense and force device mode
+  USB_OTG_FS->GCCFG &= ~USB_OTG_GCCFG_VBDEN;
+
+  USB_OTG_FS->GUSBCFG &= ~USB_OTG_GUSBCFG_FHMOD;
+  USB_OTG_FS->GUSBCFG |= USB_OTG_GUSBCFG_FDMOD;
+
+  USB_OTG_FS->GOTGCTL |= USB_OTG_GOTGCTL_BVALOEN;
+  USB_OTG_FS->GOTGCTL |= USB_OTG_GOTGCTL_BVALOVAL;
 }
 
 //--------------------------------------------------------------------+

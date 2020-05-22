@@ -49,5 +49,4 @@ JLINK_IF = swd
 STM32Prog = STM32_Programmer_CLI
 
 # flash target using on-board stlink
-flash: $(BUILD)/$(BOARD)-firmware.elf
-	$(STM32Prog) --connect port=swd --write $< --go
+flash: flash-stlink
