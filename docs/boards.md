@@ -47,6 +47,11 @@ This code base already had supported for a handful of following boards (sorted a
 
 - [Microchip SAMG55 Xplained Pro](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
 
+### MicroChip SAML22
+
+- [SAML22 Feather](https://github.com/joeycastillo/Feather-Projects/tree/main/SAML22%20Feather)
+- [Sensor Watch](https://github.com/joeycastillo/Sensor-Watch)
+
 ### Nordic nRF5x
 
 - [Adafruit Circuit Playground Bluefruit](https://www.adafruit.com/product/4333)
@@ -84,23 +89,43 @@ This code base already had supported for a handful of following boards (sorted a
 
 - [FRDM-KL25Z](https://www.nxp.com/design/development-boards/freedom-development-boards/mcu-boards/freedom-development-platform-for-kinetis-kl14-kl15-kl24-kl25-mcus:FRDM-KL25Z)
 
-### NXP LPC
+### NXP LPC 11-13-15
 
-- [ARM mbed LPC1768](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-cortex-m3/arm-mbed-lpc1768-board:OM11043)
-- [Embedded Artists LPC4088 Quick Start board](https://www.embeddedartists.com/products/lpc4088-quickstart-board)
-- [Embedded Artists LPC4357 Developer Kit](http://www.embeddedartists.com/products/kits/lpc4357_kit.php)
-- [Keil MCB1800 Evaluation Board](http://www.keil.com/mcb1800)
 - [LPCXpresso 11u37](https://www.nxp.com/design/microcontrollers-developer-resources/lpcxpresso-boards/lpcxpresso-board-for-lpc11u37h:OM13074)
 - [LPCXpresso 11u68](https://www.nxp.com/support/developer-resources/evaluation-and-development-boards/lpcxpresso-boards/lpcxpresso-board-for-lpc11u68:OM13058)
 - [LPCXpresso 1347](https://www.nxp.com/support/developer-resources/evaluation-and-development-boards/lpcxpresso-boards/lpcxpresso-board-for-lpc1347:OM13045)
+- [LPCXpresso 1549](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1500-cortex-m3/lpcxpresso-board-for-lpc1549:OM13056)
+
+### NXP LPC 17-40
+
+- [ARM mbed LPC1768](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-cortex-m3/arm-mbed-lpc1768-board:OM11043)
+- [Embedded Artists LPC4088 Quick Start board](https://www.embeddedartists.com/products/lpc4088-quickstart-board)
 - [LPCXpresso 1769](https://www.nxp.com/support/developer-resources/evaluation-and-development-boards/lpcxpresso-boards/lpcxpresso-board-for-lpc1769:OM13000)
+
+### NXP LPC 18-43
+
+- [Embedded Artists LPC4357 Developer Kit](http://www.embeddedartists.com/products/kits/lpc4357_kit.php)
+- [Keil MCB1800 Evaluation Board](http://www.keil.com/mcb1800)
 - [LPCXpresso18S37 Development Board](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc4000-cortex-m4/lpcxpresso18s37-development-board:OM13076)
+- [NGX LPC4330-Xplorer](https://www.nxp.com/design/designs/lpc4330-xplorer-board:OM13027)
+
+### NXP LPC 51
 - [LPCXpresso 51U68](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpcxpresso51u68-for-the-lpc51u68-mcus:OM40005)
+
+### NXP LPC 54
+
 - [LPCXpresso 54114](https://www.nxp.com/design/microcontrollers-developer-resources/lpcxpresso-boards/lpcxpresso54114-board:OM13089)
+
+## NXP LPC55
+
+- [Double M33 Express](https://www.crowdsupply.com/steiert-solutions/double-m33-express)
 - [LPCXpresso 55s28 EVK](https://www.nxp.com/design/software/development-software/lpcxpresso55s28-development-board:LPC55S28-EVK)
 - [LPCXpresso 55s69 EVK](https://www.nxp.com/design/development-boards/lpcxpresso-boards/lpcxpresso55s69-development-board:LPC55S69-EVK)
-- [NGX LPC4330-Xplorer](https://www.nxp.com/design/designs/lpc4330-xplorer-board:OM13027)
-- [Double M33 Express](https://www.crowdsupply.com/steiert-solutions/double-m33-express)
+- [MCU-Link](https://www.nxp.com/design/development-boards/lpcxpresso-boards/mcu-link-debug-probe:MCU-LINK)
+
+### Renesas RX
+
+- [GR-CITRUS](https://www.renesas.com/us/en/products/gadget-renesas/boards/gr-citrus)
 
 ### Raspberry Pi RP2040
 
@@ -108,6 +133,10 @@ This code base already had supported for a handful of following boards (sorted a
 - [Adafruit ItsyBitsy RP2040](https://www.adafruit.com/product/4888)
 - [Adafruit QT Py RP2040](https://www.adafruit.com/product/4900)
 - [Raspberry Pi Pico](https://www.raspberrypi.org/products/raspberry-pi-pico/)
+
+### Silabs
+
+- [EFM32GG12 Thunderboard Kit (SLTB009A)](https://www.silabs.com/development-tools/thunderboard/thunderboard-gg12-kit)
 
 ### Sony
 
@@ -121,13 +150,14 @@ This code base already had supported for a handful of following boards (sorted a
 - [STM32 L035c8 Discovery](https://www.st.com/en/evaluation-tools/32l0538discovery.html)
 - [STM32 L4R5zi Nucleo](https://www.st.com/en/evaluation-tools/nucleo-l4r5zi.html)
 - [STM32 F070rb Nucleo](https://www.st.com/en/evaluation-tools/nucleo-f070rb.html)
+- [STM32 F072 Evaluation](https://www.st.com/en/evaluation-tools/stm32072b-eval.html)
 - [STM32 F072rb Discovery](https://www.st.com/en/evaluation-tools/32f072bdiscovery.html)
 - STM32 F103c Blue Pill
 - [STM32 F207zg Nucleo](https://www.st.com/en/evaluation-tools/nucleo-f207zg.html)
 - [STM32 F303vc Discovery](https://www.st.com/en/evaluation-tools/stm32f3discovery.html)
 - STM32 F401cc Black Pill
 - [STM32 F407vg Discovery](https://www.st.com/en/evaluation-tools/stm32f4discovery.html)
-- STM32 F411ce Black Pill
+- [STM32 F411ce Black Pill](https://www.adafruit.com/product/4877)
 - [STM32 F411ve Discovery](https://www.st.com/en/evaluation-tools/32f411ediscovery.html)
 - [STM32 F412zg Discovery](https://www.st.com/en/evaluation-tools/32f412gdiscovery.html)
 - [STM32 F723e Discovery](https://www.st.com/en/evaluation-tools/32f723ediscovery.html)

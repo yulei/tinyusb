@@ -5,8 +5,9 @@
 # Set all as default goal
 .DEFAULT_GOAL := all
 
-# ESP32-S2 and RP2040 has its own CMake build system
+# ESP32-SX and RP2040 has its own CMake build system
 ifneq ($(FAMILY),esp32s2)
+ifneq ($(FAMILY),esp32s3)
 ifneq ($(FAMILY),rp2040)
 # ---------------------------------------
 # GNU Make build system
@@ -52,7 +53,8 @@ SRC_S := $(SRC_S:.S=.s)
 
 # Due to GCC LTO bug https://bugs.launchpad.net/gcc-arm-embedded/+bug/1747966
 # assembly file should be placed first in linking order
-OBJ += $(addprefix $(BUILD)/obj/, $(SRC_S:.s=.o))
+# '_asm' suffix is added to object of assembly file
+OBJ += $(addprefix $(BUILD)/obj/, $(SRC_S:.s=_asm.o))
 OBJ += $(addprefix $(BUILD)/obj/, $(SRC_C:.c=.o))
 
 # Verbose mode
@@ -111,13 +113,13 @@ $(BUILD)/obj/%.o: %.c
 
 # ASM sources lower case .s
 vpath %.s . $(TOP)
-$(BUILD)/obj/%.o: %.s
+$(BUILD)/obj/%_asm.o: %.s
 	@echo AS $(notdir $@)
 	@$(CC) -x assembler-with-cpp $(ASFLAGS) -c -o $@ $<
 
 # ASM sources upper case .S
 vpath %.S . $(TOP)
-$(BUILD)/obj/%.o: %.S
+$(BUILD)/obj/%_asm.o: %.S
 	@echo AS $(notdir $@)
 	@$(CC) -x assembler-with-cpp $(ASFLAGS) -c -o $@ $<
 
@@ -134,6 +136,7 @@ else
 	$(RM) -rf $(BUILD)
 endif
 
+endif
 endif
 endif # GNU Make
 
@@ -169,6 +172,16 @@ flash-pyocd: $(BUILD)/$(PROJECT).hex
 	pyocd flash -t $(PYOCD_TARGET) $<
 	pyocd reset -t $(PYOCD_TARGET)
 
+# flash with Black Magic Probe
+
+# This symlink is created by https://github.com/blacksphere/blackmagic/blob/master/driver/99-blackmagic.rules
+BMP ?= /dev/ttyBmpGdb
+
+flash-bmp: $(BUILD)/$(PROJECT).elf
+	$(GDB) --batch -ex 'target extended-remote $(BMP)' -ex 'monitor swdp_scan' -ex 'attach 1' -ex load  $<
+
+debug-bmp: $(BUILD)/$(PROJECT).elf
+	$(GDB) -ex 'target extended-remote $(BMP)' -ex 'monitor swdp_scan' -ex 'attach 1' $<
 
 #-------------- Artifacts --------------
 
